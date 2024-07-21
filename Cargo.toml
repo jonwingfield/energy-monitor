@@ -1,0 +1,24 @@
+[package]
+name = "energy-monitor"
+version = "0.1.0"
+authors = ["jonwingfield <wingfield.jon@gmail.com>"]
+edition = "2018"
+
+[dependencies]
+env_logger = "*"
+#i2cdev = "*"
+chrono = { version = "*", features = ["serde"] }
+sysfs_gpio = "*"
+log = "*"
+ssmarshal = "~1.0"
+serde = "~1.0"
+serde_derive = "~1.0"
+crc32fast = "1.1.2"
+rumqtt = { git = "https://github.com/AtherEnergy/rumqtt" }
+futures = "0.3"
+tokio = { version = "0.2", features = ["macros"] }
+tokio-modbus = { version = "*", default-features = false, features = ["rtu"] }
+tokio-serial = { version = "4.3.3", default-features = false }
+influxdb = { version = "0.1.0", features = ["derive"] }
+# reqwest = { version = "0.10.4", default-features = false, features = ["rustls-tls"] }
+
